@@ -105,12 +105,7 @@ def SubWord(word):
 	return ''.join(sWord)
 
 	
-def main():
-	key = ["2b", "7e", "15", "16", "28", "ae", "d2", "a6", "ab", "f7", "15", "88", "09", "cf", "4f", "3c"]
-	w = keyExpansion(key)
-	print("Key: " + "".join(key))
-	print(tabla)
-	
-
-if __name__ == '__main__':
-	main()
+key = ["2b", "7e", "15", "16", "28", "ae", "d2", "a6", "ab", "f7", "15", "88", "09", "cf", "4f", "3c"]
+w = keyExpansion(key)
+print("Key: " + "".join(key))
+print(tabla)
