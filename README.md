@@ -15,5 +15,9 @@ python expansionLlaves.py
 ```
 para que corra el programa.
 
+Para probar el cifrado solo hace falta escribir en terminal
+```
+python cifrado.py
+```
 
 PD: no supe como pasarlo a un docker jaja :c
