@@ -95,7 +95,6 @@ def cipher(input_text, key):
 def sub_bytes(state):
 	for i in range(len(state)):
 		for j in range(len(state[i])):
-			# Convertir el elemento a entero antes de realizar la operación
 			value = state[i][j]
 			state[i][j] = sbox[value // 0x10][value % 0x10]
 	return state
@@ -138,7 +137,6 @@ def matrix_to_str(matrix):
             hex_str += hex(num)[2:].zfill(2)  # Convertir a hexadecimal y rellenar con ceros si es necesario
     return hex_str
 
-# Ejemplo de uso
 def hex_to_int(hex_str):
     """Convierte una cadena hexadecimal en un entero."""
     return int(hex_str, 16)
@@ -159,7 +157,7 @@ def tuple_list_to_hex_string(tuple_list):
         hex_string += ''.join(tup)
     return hex_string
 
-# Ejemplo de uso
+
 key_hex = ["2b", "7e", "15", "16", "28", "ae", "d2", "a6", "ab", "f7", "15", "88", "09", "cf", "4f", "3c"]
 plaintext_hex = ["32", "43", "f6", "a8", "88", "5a", "30", "8d", "31", "31", "98", "a2", "e0", "37", "07", "34"]
 
