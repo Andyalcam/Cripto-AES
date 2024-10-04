@@ -3,21 +3,41 @@
 
 ---
 Alvarado Camacho Andrea		318064343
+---
 
-Para correr el programa, es necesario contar con Python 3 y PrettyTable por lo que se deben asegurar de tener instalado dicho paquete, en todo caso se instala con 
+## Instrucciones para Ejecutar el Proyecto con Docker
+
+A continuación se describen los pasos para ejecutar el proyecto de expansión de llaves AES en Docker:
+
+### 1. Clonar el Repositorio
+
+Primero, clona el repositorio en tu máquina local usando el siguiente comando:
+
+```bash
+git clone https://gitlab.com/Andyalcam/Cripto-AES.git
 ```
-pip install PrettyTable
+Luego colocate a la altura de el archivo ```expansionLlaves.py``` con el comando:
+```bash
+cd AES
 ```
 
-Una vez instalado este paquete, solo falta escribir en terminal 
-```
-python expansionLlaves.py
-```
-para que corra el programa.
+### 2. Crear la imagen
 
-Para probar el cifrado solo hace falta escribir en terminal
+Debes crear una imagen cambiando el nombre de la etiqueta por ejemplo:
+
+```bash
+docker build -t aes-expansion-llaves .
 ```
-python cifrado.py
+y verifica que exista con:
+
+```bash
+docker image ls
 ```
 
-PD: no supe como pasarlo a un docker jaja :c
+### 3. Ejecutar el contenedor
+
+Una vez que se haya creado la imagen con exito puedes correr el contenedor con el siguiente codigo:
+
+```bash
+docker run aes-expansion-llaves
+```
