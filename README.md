@@ -1,5 +1,4 @@
-# Examen primera parte
-## Expansion de llaves
+# Examen primera parte. Expansion de llaves
 
 ---
 Alvarado Camacho Andrea		318064343
@@ -18,7 +17,7 @@ git clone https://gitlab.com/Andyalcam/Cripto-AES.git
 ```
 Luego colocate a la altura de el archivo ```expansionLlaves.py``` con el comando:
 ```bash
-cd AES
+cd Cripto-AES
 ```
 
 ### 2. Crear la imagen
@@ -40,4 +39,4 @@ Una vez que se haya creado la imagen con exito puedes correr el contenedor con e
 
 ```bash
 docker run aes-expansion-llaves
-```
+``
