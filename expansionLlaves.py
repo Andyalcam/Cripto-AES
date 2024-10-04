@@ -1,6 +1,8 @@
 from prettytable import PrettyTable
+
 tabla = PrettyTable()
 tabla.field_names = ["i", "temp", "After RotWord()","After SubWord()","Rcon[i/Nk]","After XOR with Rcon","w[i-Nk]","w[i]=temp^w[i-Nk]"]
+
 # Constante Rcon
 Rcon = [0x00000000, 0x01000000, 0x02000000,
 		0x04000000, 0x08000000, 0x10000000, 
