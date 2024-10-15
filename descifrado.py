@@ -52,20 +52,29 @@ def inv_mix_columns(state):
 def decipher(ciphertext, key):
     Nr = 10
     Nb = 4
+    print("round[10].output       ", ciphertext)
     state = str_to_matrix(ciphertext)
     key_schedule = keyExpansion(key)
 
     state = add_round_key(state, key_schedule[4*Nr:4*Nr+4])
+    print("round[10].k_sch\t\t{}".format(matrix_to_str(state)))
     
     for round in range(Nr - 1, 0, -1):
         state = inv_shift_rows(state)
+        print("round[ {}].s_row\t\t{}".format(round, matrix_to_str(state)))
         state = inv_sub_bytes(state)
+        print("round[ {}].s_box\t\t{}".format(round, matrix_to_str(state)))
         state = add_round_key(state, key_schedule[4*round:4*round+4])
+        print("round[ {}].k_sch\t\t{}".format(round, matrix_to_str(state)))
         state = inv_mix_columns(state)
+        print("round[ {}].m_col\t\t{}".format(round, matrix_to_str(state)))
 
     state = inv_shift_rows(state)
+    print("round[i].s_row\t\t{}".format(matrix_to_str(state)))
     state = inv_sub_bytes(state)
+    print("round[i].s_box\t\t{}".format(matrix_to_str(state)))
     state = add_round_key(state, key_schedule[0:4])
+    print("round[i].k_sch\t\t{}".format(matrix_to_str(state)))
     
     return matrix_to_str(state)
 
@@ -97,5 +106,5 @@ for i in range(256):
 ciphertext = "3925841d02dc09fbdc118597196a0b32"
 key = ["2b", "7e", "15", "16", "28", "ae", "d2", "a6", "ab", "f7", "15", "88", "09", "cf", "4f", "3c"]
 
-decrypted_text = decipher(ciphertext, key)
-print("Texto desencriptado:", decrypted_text)
+print("\nProceso de descifrado")
+print("PLAINTEXT:\t       ", decipher(ciphertext, key))
