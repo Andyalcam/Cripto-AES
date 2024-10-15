@@ -24,7 +24,7 @@ cd Cripto-AES
 Debes crear una imagen cambiando el nombre de la etiqueta por ejemplo:
 
 ```bash
-docker build -t aes-expansion-llaves .
+docker build -t aes-cifradoydescifrado .
 ```
 y verifica que exista con:
 
@@ -37,5 +37,7 @@ docker image ls
 Una vez que se haya creado la imagen con exito puedes correr el contenedor con el siguiente codigo:
 
 ```bash
-docker run aes-expansion-llaves
+docker run aes-cifradoydescifrado
 ```
+
+Nota: no se en que momento algo fallo en el descifrado porque no sale el texto original :ccccc y ya se me secó el cerebro jaja

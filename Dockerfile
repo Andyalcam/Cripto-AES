@@ -12,4 +12,4 @@ COPY . .
 RUN pip install -r requirements.txt
 
 # Comando para ejecutar el codigo
-CMD ["python", "expansionLlaves.py"]
+CMD ["python", "descifrado.py"]
